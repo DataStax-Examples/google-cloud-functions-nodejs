@@ -1,7 +1,7 @@
 # Prerequisites Setup
 ## Cassandra REST API with Google Cloud Functions in Node.js
 
-In this example we will manually set up a DataStax Distribution of Apache Cassandra instance in GCP, the same could also be done with Apache Cassandra or DataStax Enterprise.
+In this example we will manually set up an Apache Cassandra instance in GCP
 
 ### Launch an instance in Google Cloud
 
@@ -23,25 +23,35 @@ ssh -i <path-to-private-key> <user-name>@<public-ip>
 sudo apt-get update 
 sudo apt-get install -y openjdk-8-jdk-headless
 ```
-3. Install DDAC ( by installing you agree to the [terms of use](https://www.datastax.com/legal/datastax-distribution-apache-cassandra-ddac-terms) )
+3. Install Cassandra
+Note if the mirror below is no longer working, visit the (downloads mirror)[https://www.apache.org/dyn/closer.lua/cassandra/3.11.6/apache-cassandra-3.11.6-bin.tar.gz] for a recent link
 ```
-mkdir ddac; wget -c https://downloads.datastax.com/ddac/ddac-bin.tar.gz -O - | tar -xz -C ddac --strip-components=1
+mkdir cassandra; wget -c http://mirror.cogentco.com/pub/apache/cassandra/3.11.6/apache-cassandra-3.11.6-bin.tar.gz -O - | tar -xz -C cassandra --strip-components=1
 ```
 4. Set `broadcast_rpc_address` to the Public IP ( needed for client connections )
 ```
-sed -i 's/# broadcast_rpc_address:.*/broadcast_rpc_address: <public-ip>/' ddac/conf/cassandra.yaml
+sed -i 's/# broadcast_rpc_address:.*/broadcast_rpc_address: <public-ip>/' cassandra/conf/cassandra.yaml
 ```
 5. Set `rpc_address` to listen on 0.0.0.0
 ```
-sed -i 's/^rpc_address:.*/rpc_address: 0.0.0.0/' ddac/conf/cassandra.yaml
+sed -i 's/^rpc_address:.*/rpc_address: 0.0.0.0/' cassandra/conf/cassandra.yaml
 ```
 6. Start the database
 ```
-ddac/bin/cassandra
+cassandra/bin/cassandra
 ```
-7. Grab the data center name from the last line of output from the startup process, in the following example it is "datacenter1". You will need to set this as the `LOCAL_DC` value in serverless.yml
+7. Confirm the data center name is "datacenter1". You will need to set this as the `LOCAL_DC` value in serverless.yml
 ```
-INFO  [main] 2019-09-22 16:38:48,833 StorageService.java:722 - Snitch information: DynamicEndpointSnitch{registered=true, subsnitch=SimpleSnitch{, DC='datacenter1', rack='rack1'}}, local DC:datacenter1 / rack:rack1
+cassandra/bin/cqlsh
+```
+```
+cqlsh> select data_center from system.local;
+
+ data_center
+-------------
+ datacenter1
+
+(1 rows)
 ```
 
 ### Set up local development environment
