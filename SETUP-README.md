@@ -12,7 +12,7 @@ In this example we will manually set up an Apache Cassandra instance in GCP
 5. Once the instance is created, go to the Networking Details to create firewall rules that will allow inbound and outbound TCP traffic on the C* CQL port 9042. **Note: This is simply for example purposes and this security setting should never be deployed for any real use cases**.
 
 ### Start the database
-Now that we have an instance running in Google Cloud, we will install and start DDAC on that instance.
+Now that we have an instance running in Google Cloud, we will install and start Cassandra on that instance.
 
 1. To SSH to your instance in Google Cloud, you will need to use the private key that is the pair to the public key that was uploaded in Step 4 above as well as the Public IP.
 ```
@@ -24,7 +24,7 @@ sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk-headless
 ```
 3. Install Cassandra
-Note if the mirror below is no longer working, visit the (downloads mirror)[https://www.apache.org/dyn/closer.lua/cassandra/3.11.6/apache-cassandra-3.11.6-bin.tar.gz] for a recent link
+Note if the mirror below is no longer working, visit the [downloads mirror](https://www.apache.org/dyn/closer.lua/cassandra/3.11.6/apache-cassandra-3.11.6-bin.tar.gz) for a recent link
 ```
 mkdir cassandra; wget -c http://mirror.cogentco.com/pub/apache/cassandra/3.11.6/apache-cassandra-3.11.6-bin.tar.gz -O - | tar -xz -C cassandra --strip-components=1
 ```
