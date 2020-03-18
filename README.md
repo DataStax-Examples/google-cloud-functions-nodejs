@@ -1,5 +1,5 @@
-# Cassandra REST API with Google Cloud Functions in Node.js
-This example shows how to use [Google Cloud Functions](https://cloud.google.com/functions/) with the [Node.js DataStax Cassandra Driver](https://docs.datastax.com/en/developer/nodejs-driver/latest) to set up a basic REST API for the DataStax or Cassandra database via HTTP Endpoints. The [Serverless Framework](https://serverless.com/) is used to facilitate the setup and deployment of the functions.
+# Apache Cassandra REST API with Google Cloud Functions in Node.js
+This example shows how to use [Google Cloud Functions](https://cloud.google.com/functions/) with the [Node.js DataStax Cassandra Driver](https://docs.datastax.com/en/developer/nodejs-driver/latest) to set up a basic REST API for a Cassandra database via HTTP Endpoints. The [Serverless Framework](https://serverless.com/) is used to facilitate the setup and deployment of the functions.
 
 Contributor(s): [Chris Splinter](https://github.com/csplinter)
 
@@ -20,7 +20,7 @@ The Serverless Framework handles the packaging and deployment of the functions t
 ### Setup
 Before running with this example, head over to the [SETUP-README](SETUP-README.md) for instructions on how to 
 1. launch an instance in Google Cloud
-2. install and start a DataStax Distribution of Apache Cassandra database
+2. install and start a Cassandra database
 3. setup your local development environment for Node.js and [serverless](https://serverless.com)
 
 Once the above is completed, you will have all of the needed pieces in place to run this example.
