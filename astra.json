@@ -1,0 +1,10 @@
+{
+  "name": "Cassandra + Google Cloud Functions + Astra using Node.js",
+  "description": "This example shows how to use Google Cloud Functions with the Node.js DataStax Cassandra Driver to set up a basic REST API for a Cassandra database via HTTP Endpoints.",
+  "duration": "30 minutes",
+  "skillLevel": "Intermediate",
+  "githubUrl": "https://github.com/DataStax-Examples/google-cloud-functions-nodejs",
+  "tags": [{ "name": "labs", "color": "warning" }, { "name": "javascript" }],
+  "category": "starters",
+  "priority": 3
+}
