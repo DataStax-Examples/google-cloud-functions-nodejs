@@ -4,7 +4,11 @@
   "duration": "30 minutes",
   "skillLevel": "Intermediate",
   "githubUrl": "https://github.com/DataStax-Examples/google-cloud-functions-nodejs",
-  "tags": [{ "name": "labs", "color": "warning" }, { "name": "javascript" }],
+  "tags": [
+    { "name": "labs", "color": "warning" },
+    { "name": "javascript" },
+    { "name": "nodejs driver" }
+  ],
   "category": "starters",
   "priority": 3
 }
