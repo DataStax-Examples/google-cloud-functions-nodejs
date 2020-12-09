@@ -5,7 +5,6 @@
   "skillLevel": "Intermediate",
   "githubUrl": "https://github.com/DataStax-Examples/google-cloud-functions-nodejs",
   "tags": [
-    { "name": "labs", "color": "warning" },
     { "name": "javascript" },
     { "name": "nodejs driver" }
   ],
