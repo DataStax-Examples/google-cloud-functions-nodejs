@@ -25,7 +25,7 @@ Let's do some initial setup by creating a serverless(!) database.
 
 ### DataStax Astra
 <!--- enter a unique UTM_CODE for your sample app below --->
-1. Create a [DataStax Astra account](https://dtsx.io/3zEasmu) if you don't already have one:
+1. Create a [DataStax Astra account](https://dtsx.io/3jENJkP) if you don't already have one:
 ![image](https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/astra-register-basic-auth.png)
 
 2. On the home page. Locate the button **`Create Database`**
