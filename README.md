@@ -68,7 +68,7 @@ Let's do some initial setup by creating a serverless(!) database.
   - [Running on your local machine](#running-on-your-local-machine)
 
 ### Running on your local machine
-Before running with this example, head over to the [SETUP-README](SETUP-README.md) for instructions on how to 
+Before running with this example, head over to the [SETUP-README](https://raw.githubusercontent.com/DataStax-Examples/google-cloud-functions-nodejs/master/SETUP-README.md) for instructions on how to 
 1. launch an instance in Google Cloud
 2. install and start a Cassandra database
 3. setup your local development environment for Node.js and [serverless](https://serverless.com)
